@@ -1,0 +1,94 @@
+@font-face {
+  font-family: IRANSans;
+  src: url("../fonts/IRANSans/IRANSansWeb_Light.woff") format("woff");
+}
+
+* {
+  direction: rtl;
+  text-align: right;
+  font-family: IRANSans;
+}
+
+i,
+a {
+  cursor: pointer;
+}
+
+p {
+  text-align: justify;
+}
+
+/* media : */
+@media only screen and (max-width: 767.98px) {
+  .header {
+    display: block;
+  }
+
+  .sidebar-header,
+  .body-header {
+    width: 100%;
+  }
+
+  main {
+    width: 100vw !important;
+  }
+
+  aside {
+    position: fixed;
+    width: 12rem;
+    z-index: 999;
+  }
+
+  .body-header {
+    font-size: 0.95rem;
+  }
+  .profile-avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .profile-username {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media only screen and (max-width: 991.98px) {
+
+  .left-body-header {
+    width: 100%;
+  }
+  .notifications,.comments{
+    width: 14rem;
+    right: 0;
+  }
+  .notification-img,.comment-img{
+    width: 2.5rem;
+  }
+  .comments{
+    height: calc(100vh - 21vh);
+  }
+
+  .comment-username {
+    font-size: 0.7rem;
+  }
+  
+  .comment-circle-icon {
+    font-size: 0.5rem;
+  }
+
+  .notification-username {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  
+  .notification-txt {
+    font-size: .65rem;
+    line-height: 0.6rem;
+  }
+  
+  .notification-time {
+    font-size: 0.5rem;
+    line-height: 0.5rem;
+  }
+
+}

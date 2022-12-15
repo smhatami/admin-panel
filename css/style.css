@@ -1,0 +1,377 @@
+
+:root{
+
+  --potato: #fe8a7d;
+
+}
+
+/*********************************************************************************/
+
+/* header : */
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  line-height: 3.5rem;
+  display: flex;
+  justify-content: space-around;
+  z-index: 9999;
+  align-items: stretch;
+}
+
+/* sidebar header : */
+
+.bg-gray {
+  background-color: #404e67;
+  color: #dcdcdc;
+}
+
+.header-logo {
+  max-height: 3.5rem;
+}
+
+.sidebar-header {
+  flex: 0 0 15rem;
+}
+
+/* sidebar header end */
+
+/*************************************/
+
+/* body header : */
+
+.body-header {
+  background: #fff;
+  width: calc(100% - 15rem);
+  box-shadow: 2px 2px 5px 1px rgba(128, 128, 128, 0.3);
+  z-index: 9;
+}
+
+.search-aria {
+  background: #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 2rem;
+}
+
+.search-input {
+  background: transparent;
+  outline: none;
+  border: none;
+  margin: 0 0.8rem;
+  height: 50%;
+  transition: all .3s;
+}
+
+.notifications,
+.comments {
+  width: 16rem;
+  margin-top: 0.5rem;
+  background: #ffff;
+  color: #000;
+  left: 0;
+  box-shadow: 2px 2px 20px 1px rgba(128, 128, 128, 0.3);
+  /* transition: all .3s; */
+}
+
+.notifications{
+  z-index: 9;
+}
+.comments{
+  z-index: 8;
+}
+
+.notification-img,
+.comment-img {
+  width: 3rem;
+  border-radius: 0.2rem;
+  margin-left: 0.3rem;
+}
+
+.notification-username {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 0.1rem;
+}
+
+.notification-txt {
+  font-size: 0.75rem;
+  line-height: 0.7rem;
+}
+
+.notification-time {
+  font-size: 0.6rem;
+  line-height: 0.6rem;
+  color: gray;
+}
+
+.notifications ul li {
+  padding: 10px 15px;
+}
+
+.comment-search-input {
+  outline: none;
+  font-size: 1rem;
+  height: 2.3rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 3px 8px;
+}
+
+.comment-username {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.comment-circle-icon {
+  font-size: 0.6rem;
+}
+
+.notifications li:hover,
+.comments li:hover,
+.profile-attachment-link:hover {
+  background: #f1f1f1;
+}
+
+.notifications {
+  overflow: auto;
+  font-weight: bolder;
+}
+.notifications::-webkit-scrollbar {
+  display: none;
+}
+
+.comments {
+  overflow: auto;
+  height: calc(100vh - 12vh);
+  font-weight: bolder;
+}
+.comments::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-avatar {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.profile-username {
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.profile {
+  position: absolute;
+  left: 0;
+  z-index: 9999;
+  height: auto;
+  width: 13rem;
+  background: #fff;
+  color: #000;
+  box-shadow: 2px 2px 20px 1px rgba(128, 128, 128, 0.3);
+  margin-top: 4rem;
+}
+.profile-attachment-link {
+  font-size: 0.9rem;
+  padding: 0.4rem;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+/***************************************************************************/
+
+/* body container : */
+
+/* aside | sidebar : */
+
+.body-container {
+  margin-top: 3.5rem;
+  z-index: 9999;
+}
+
+aside {
+  flex: 0 0 15rem;
+  background: #404e67;
+  color: #dcdcdc;
+  transition: all .5s;
+}
+
+.sidebar-container {
+  height: calc(100vh - 3.5rem);
+  z-index: 999;
+  padding: 1rem 0;
+}
+
+.sidebar-divider {
+  font-size: 0.8rem;
+  color: #999;
+  padding: 0 1rem;
+  margin-top: 1rem;
+}
+
+.sidebar-link {
+  font-size: .9rem;
+  display: block;
+  margin-top: .9rem;
+  padding: 0.4rem 1rem;
+  outline: none;
+  color: #dcdcdc;
+  transition: all 0.3s;
+}
+
+.sidebar-link:hover {
+  text-decoration: none;
+  color: var(--potato);
+}
+
+.sidebar-link i {
+  width: 2rem;
+  text-align: center;
+}
+
+.sidebar-group-link {
+  font-size: .9rem;
+  margin-top: .9rem;
+  padding: 0.4rem 0;
+  color: #dcdcdc;
+}
+
+.sidebar-group-link-active {
+  border-right: 3px solid var(--potato);
+}
+
+.sidebar-dropdown {
+  display: none;
+  height: 0;
+  font-size: .9rem;
+}
+
+.sidebar-group-link-active .sidebar-dropdown {
+  height: auto!important;
+  display: block!important;
+  transition: all .3s;
+}
+
+.sidebar-dropdown-toggle {
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s;
+}
+
+.sidebar-dropdown-toggle span:hover {
+  color: #fff;
+}
+
+.sidebar-icon {
+  width: 2rem;
+  text-align: center;
+}
+.sidebar-angle {
+  float: left;
+  padding: 0.2rem 0;
+}
+
+.sidebar-dropdown a , button {
+  display: block;
+  padding: 0.2rem 1rem;
+  text-decoration: none;
+  background: inherit;
+  outline: none;
+  color: #dcdcdc;
+  transition: all 0.3s;
+}
+
+.sidebar-dropdown a::before , button::before{
+  content: "»";
+  margin: .8rem;
+}
+
+.sidebar-dropdown a:hover , button:hover{
+  color: var(--potato);
+}
+
+/*******************************************************/
+
+/* main | main body : */
+
+main{
+  width: calc( 100vw - 15rem);
+  padding: 1rem;
+  min-height: calc(100vh - 3.5rem);
+  background: #eee;
+  transition: all .5s;
+}
+
+.bg-custom-light-yellow{
+  background: -webkit-gradient(linear, left top, right top, from(#feb798), to(#feb935));
+  background: linear-gradient(to right , #feb798 , #feb935);
+}
+.bg-custom-light-green{
+  background: -webkit-gradient(linear, left top, right top, from(#0df3a3), to(#0ac282));
+  background: linear-gradient(to right , #0df3a3 , #0ac282);
+}
+.bg-custom-light-red{
+  background: -webkit-gradient(linear, left top, right top, from(#fe909d), to(#fe5d78));
+  background: linear-gradient(to right , #fe909d , #fe5d78);
+}
+.bg-custom-light-blue{
+  background: -webkit-gradient(linear, left top, right top, from(#01dbdf), to(#01a9ac));
+  background: linear-gradient(to right , #01dbdf , #01a9ac);
+}
+
+.info-card-icon{
+  font-size: 2rem;
+}
+
+.info-card-footer{
+  font-size: .8rem;
+}
+
+.info-card-body h5{
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.info-card-body p{
+  font-size: .8rem;
+  line-height: 1rem;
+}
+
+.users-box{
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: .5rem;
+  margin-top: .8rem;
+}
+
+.user-box-header h5{
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.user-box-header p{
+  font-size: .8rem;
+}
+
+.user-box-body p{
+  font-size: .9rem;
+}
+
+/* body container end */
+
+/**********************************************************************/
+
+/* footer : */
+
+footer a{
+  color: #aaa;
+  transition: .3s;
+}
+footer a:hover{
+  text-decoration: none;
+  color: #fff;
+}
